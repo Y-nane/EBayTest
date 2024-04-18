@@ -1,0 +1,6 @@
+server:
+  port: 9009
+  servlet:
+    context-path: /nane
+    encoding:
+      charset: utf-8
