@@ -31,7 +31,5 @@ public class AdminController {
         }
         boolean res = userService.addResource(adminAddResource);
         return new Result().success(res);
-
-
     }
 }

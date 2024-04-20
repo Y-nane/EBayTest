@@ -16,6 +16,12 @@ import java.util.List;
 @Service
 @Slf4j
 public class UserServiceImpl implements UserService {
+    /**
+     * 新增资源
+     *
+     * @param adminAddResource 管理员为成员新增资源权限
+     * @return
+     */
     @Override
     public boolean addResource(AdminAddResource adminAddResource) {
         // 将数据存储进文件代替存储进数据库中
@@ -53,6 +59,13 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * 查询用户是否有该资源的权限
+     *
+     * @param user     用户信息
+     * @param resource 资源
+     * @return
+     */
     @Override
     public boolean findResource(User user, String resource) {
         String filePath = System.getProperty("user.dir") + File.separator
